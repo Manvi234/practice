@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Istanbul</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #fae3d9;
+        border: 1px solid #f1f1f1;
+        font-weight: bolder;
+        font-size: 30px;
+        border-radius: 4px;
+        padding: 10px;
+      }
+      h2 {
+        text-align: center;
+        color: #fae3d9;
+        padding: 10px;
+        margin-bottom: 40px;
+        font-size: 21px;
+        font-weight: 900;
+        text-decoration: underline;
+      }
+      body {
+        background: linear-gradient(
+          96.2deg,
+          rgb(255, 230, 112) 10.4%,
+          rgb(255, 100, 100) 43.8%,
+          rgb(0, 93, 219) 105.8%
+        );
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 6px;
+        max-width: 100%;
+        width: 250px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+        color: #fae3d9;
+      }
+      a {
+        text-align: center;
+        text-decoration: none;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid transparent;
+        color: #377ac2;
+        background-color: #fae3d9;
+        border-radius: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        transition: all 200ms ease-in-out;
+        box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.2);
+      }
+      button:hover {
+        color: #fae3d9;
+        background-color: #377ac2;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      span {
+        font-weight: 800;
+        text-decoration-color: #fae3d9;
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 40px;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+      }
+      .bold {
+        text-decoration: underline;
+        color: antiquewhite;
+        font-style: italic;
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+      }
+      .built {
+        text-align: center;
+      }
+      .built:hover {
+        text-decoration: underline;
+      }
+      .page {
+        text-align: center;
+      }
+      .wiki {
+        font-size: 13px;
+        color: #fae3d9;
+        font-weight: 700;
+      }
+      .wiki:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Istanbul</h1>
+      <h2>Somewhere between living and dreaming, there's Istanbul</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/044/053/original/turkey_istanbul.jpg?1660996315"
+        alt="istanbul"
+      />
+      <hr />
+      <p>
+        <strong class="bold">Istanbul</strong> is a major city in Turkey that
+        straddles Europe and Asia across the Bosphorus Strait. Its Old City
+        reflects cultural influences of the many empires that once ruled here.
+        In the Sultanahmet district, the open-air,
+        <span><em>Roman-era Hippodrome</em></span> was for centuries the site of
+        chariot races, and <span><em>Egyptian obelisks</em></span> also remain.
+        The iconic <span><em>Byzantine Hagia Sophia</em></span> features a
+        soaring 6th-century dome and rare <span><em>Christian mosaics</em></span
+        >.
+      </p>
+
+      <a
+        href="https://en.wikipedia.org/wiki/Istanbul"
+        target="_blank"
+        class="wiki"
+        >Read On Wikipedia</a
+      >
+      <br />
+      <button>Book Your Tickets ✈️</button>
+      <p class="page">
+        This Page was Built by
+        <a href="https://github.com/Manvi234" target="_blank" class="built"
+          >Manvi</a
+        >
+      </p>
+    </div>
+    <script>
+      function travelling() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your emailid?");
+        let travel = prompt("Will you like to visit Istanbul?");
+        if (
+          travel.toLowerCase() === "yes" &&
+          name.length > 0 &&
+          email.length > 0
+        ) {
+          alert(
+            "Thanks " +
+              name +
+              " for showing interest , we will contact you on your emailid: " +
+              email
+          );
+        } else {
+          alert("Thanks for visiting our website");
+        }
+      }
+
+      let ticketbutton = document.querySelector("button");
+      ticketbutton.addEventListener("click", travelling);
+    </script>
+  </body>
+</html>
